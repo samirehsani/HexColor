@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex color</title>
+</head>
+<body style="display:flex; align-items: center; flex-direction: column;">
+    <div class="container" style="width: 500px; height: 200px; border: 1px dashed red"></div>
+    <input type="text" id="userinput" style="width: 468px; padding:15px; font-size: 30px; margin-top: 20px;" autocomplete="off" oninput="onInput()" placeholder="Enter a hex color">
+    <h1 id="counter"> Length: </h1>
+    <script>
+        var container =  document.querySelector('.container');
+        var counter =  document.querySelector('#counter');
+        
+        function onInput(){
+            var value = document.querySelector('#userinput').value;
+            container.style.background = value;
+            counter.innerHTML = "Length: " + value.length;
+        }
+    </script>
+</body>
+</html>
